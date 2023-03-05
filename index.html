@@ -94,6 +94,10 @@
             outline: none;
             cursor: pointer;
         }
+
+        #bgPassword {
+            background-color: #FFF1BE;
+        }
     </style>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"
@@ -124,6 +128,7 @@
             try {
                 const decryptedData = decrypted.toString(CryptoJS.enc.Utf8);
                 document.getElementById('bgPassword').style.display = "none";
+                document.getElementsByTagName("body")[0].style.backgroundColor = "#FFF1BE";
                 document.getElementById(id).setAttribute('src', decryptedData);
             } catch (error) {
                 document.getElementById('formInput').style.display = "none";
